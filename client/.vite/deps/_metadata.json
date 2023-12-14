@@ -1,29 +1,35 @@
 {
   "hash": "61e128b6",
-  "browserHash": "c7f16899",
+  "browserHash": "063cce38",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "8c9e8770",
+      "fileHash": "d98db7ac",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "9360c033",
+      "fileHash": "27f1388f",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "97322ea0",
+      "fileHash": "d25be34b",
       "needsInterop": false
     },
     "axios": {
       "src": "../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "01742e69",
+      "fileHash": "404b35b4",
+      "needsInterop": false
+    },
+    "react-hook-form": {
+      "src": "../../node_modules/react-hook-form/dist/index.esm.mjs",
+      "file": "react-hook-form.js",
+      "fileHash": "9959f91c",
       "needsInterop": false
     }
   },

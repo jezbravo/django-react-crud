@@ -1,11 +1,12 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { getAllTasks } from '../api/tasks.api'
 
 export function TasksList() {
 
   useEffect(() => {
-    function loadTasks() {
-      const res = getAllTasks()
+    async function loadTasks() {
+      const res = await getAllTasks();
       console.log(res)
     }
     loadTasks();

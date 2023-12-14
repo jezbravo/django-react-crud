@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { TasksPage } from '../src/pages/TasksPage'
 import { TaskFormPage } from '../src/pages/TaskFormPage'

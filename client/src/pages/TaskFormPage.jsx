@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
+import { createTask } from '../api/tasks.api'
+
 
 export function TaskFormPage() {
 
@@ -7,8 +9,8 @@ export function TaskFormPage() {
     errors
   } } = useForm();
 
-  const onSubmit = handleSubmit(data => {
-    console.log(data)
+  const onSubmit = handleSubmit(async data => {
+    await createTask(data)
   })
 
   return (

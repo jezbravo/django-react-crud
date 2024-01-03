@@ -14,15 +14,19 @@ export function TaskFormPage() {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <input type="text" placeholder="Title"
+        <input
+          type="text"
+          placeholder="Title"
           {...register("title", { required: true })}
         />
-        {errors.title && <span>This field is required</span>}
+        {errors.title && <span>Title is required</span>}
 
-        <textarea rows="3" placeholder="Description"
+        <textarea
+          rows="3"
+          placeholder="Description"
           {...register("description", { required: true })}
         ></textarea>
-        {errors.description && <span>This field is required</span>}
+        {errors.description && <span>Description is required</span>}
 
         <button>Save</button>
       </form>

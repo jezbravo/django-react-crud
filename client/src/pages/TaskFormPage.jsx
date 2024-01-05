@@ -14,7 +14,7 @@ export function TaskFormPage() {
 
   const onSubmit = handleSubmit(async data => {
     if (params.id) {
-      updateTask();
+      await updateTask(params.id, data);
     } else {
       await createTask(data);
     }

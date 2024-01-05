@@ -9,7 +9,7 @@ export const getAllTasks = () => {
 };
 
 export const getTask = (id) => {
-  return taskApi.get(`/${id}`);
+  return taskApi.get(`/${id}/`);
 };
 
 export const createTask = (task) => {
@@ -21,5 +21,5 @@ export const deleteTask = (id) => {
 };
 
 export const updateTask = (id, task) => {
-  return taskApi.put(`/${id}`, task);
+  return taskApi.put(`/${id}/`, task);
 };

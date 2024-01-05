@@ -9,5 +9,5 @@ export const getAllTasks = () => {
 };
 
 export const createTask = (task) => {
-  return taskApi.post("/");
+  return taskApi.post("/", task);
 };

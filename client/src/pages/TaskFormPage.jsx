@@ -16,9 +16,22 @@ export function TaskFormPage() {
   const onSubmit = handleSubmit(async data => {
     if (params.id) {
       await updateTask(params.id, data);
+      toast.success('Task updated successfully.', {
+        position: 'top-center',
+        style: {
+          background: 'blue',
+          color: '#fff'
+        }
+      })
     } else {
       await createTask(data);
-      toast.success('Task created')
+      toast.success('Task created successfully.', {
+        position: 'top-center',
+        style: {
+          background: 'green',
+          color: '#fff'
+        }
+      })
     }
     navigate('/tasks');
   });
@@ -60,6 +73,13 @@ export function TaskFormPage() {
             const accepted = window.confirm('Are you sure?')
             if (accepted) {
               await deleteTask(params.id);
+              toast.success('Task deleted successfully.', {
+                position: 'top-center',
+                style: {
+                  background: 'orange',
+                  color: 'black'
+                }
+              })
               navigate('/tasks');
             }
           }}

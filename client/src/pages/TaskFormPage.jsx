@@ -48,9 +48,10 @@ export function TaskFormPage() {
   }, [])
 
   return (
-    <div>
+    <div className='max-w-xl mx-auto'>
       <form onSubmit={onSubmit}>
         <input
+          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
           type="text"
           placeholder="Title"
           {...register("title", { required: true })}
@@ -58,17 +59,22 @@ export function TaskFormPage() {
         {errors.title && <span>Title is required</span>}
 
         <textarea
+          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
           rows="3"
           placeholder="Description"
           {...register("description", { required: true })}
         ></textarea>
         {errors.description && <span>Description is required</span>}
 
-        <button>Save</button>
+        <button
+          className="bg-indigo-500 p-3 rounded-lg block w-full mt-3">
+          Save
+        </button>
       </form>
 
       {
         params.id && <button
+          className="bg-red-500 p-3 rounded-lg w-48 mt-3"
           onClick={async () => {
             const accepted = window.confirm('Are you sure?')
             if (accepted) {
